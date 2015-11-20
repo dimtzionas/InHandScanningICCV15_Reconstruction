@@ -1,0 +1,23 @@
+<!DOCTYPE FilterScript>
+<FilterScript>
+ <filter name="Remove Duplicated Vertex"/>
+ <filter name="Merge Close Vertices">
+  <Param type="RichAbsPerc" value="2.788e-05" min="0" name="Threshold" max="0.00278796"/>
+ </filter>
+ <filter name="Remove Duplicate Faces"/>
+ <filter name="Remove Unreferenced Vertex"/>
+ <filter name="Remove isolated pieces (wrt face num)">
+  <Param type="RichInt" value="50" name="MinComponentSize"/>
+ </filter>
+ <filter name="Select None"/>
+ <filter name="Select non Manifold Vertices"/>
+ <filter name="Delete Selected Vertices"/>
+ <filter name="HC Laplacian Smooth"/>
+ <filter name="Remove Unreferenced Vertex"/>
+ <filter name="Surface Reconstruction: Poisson">
+  <Param type="RichInt" value="10" name="OctDepth"/>
+  <Param type="RichInt" value="10" name="SolverDivide"/>
+  <Param type="RichFloat" value="1" name="SamplesPerNode"/>
+  <Param type="RichFloat" value="1" name="Offset"/>
+ </filter>
+</FilterScript>

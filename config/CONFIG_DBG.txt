@@ -1,0 +1,104 @@
+################################################################################################################
+################################################################################################################
+################################################################################################################
+
+PARAM_DBG_cameraFlipX = false;
+PARAM_DBG_cameraFlipY = true;
+PARAM_DBG_cameraFlipZ = false;
+
+################################################################################################################
+################################################################################################################
+################################################################################################################
+
+							PARAM_DBG_Normals_VizDistCOEFF_CARMINE 	    = 2.5;		
+							PARAM_DBG_Normals_VizDistCOEFF_SYNTH   	    = 10.5;		
+
+							PARAM_DBG_Normals_VizSizeCOEFF_CARMINE	    = 10.050;
+							PARAM_DBG_Normals_VizSizeCOEFF_SYNTH   	    = 10.050;
+
+
+PARAM_DBG_RenderObj_Source       	    = true;	PARAM_DBG_RenderObj_Target       	    = true;
+PARAM_DBG_RenderObjNORMALS_Source	    = false;	PARAM_DBG_RenderObjNORMALS_Target	    = false;
+
+PARAM_DBG_OBJ_FEAT_2D_Source	    	    = true;	PARAM_DBG_OBJ_FEAT_2D_Target	    	    = true;
+PARAM_DBG_OBJ_FEAT_3D_Source	    	    = true;	PARAM_DBG_OBJ_FEAT_3D_Target	    	    = true;
+PARAM_DBG_RenderCORR_Skin_TouchVertSphere   = true;
+
+####################################################
+PARAM_DBG_OBJ_FEAT_2D_FLIP                  = false;
+PARAM_DBG_OBJ_FEAT_2D_SHOW                  = true;
+####################################################
+
+###################################################################
+PARAM_DBG_Render__SEPARATE_FEAT_true__OR__FUSED_FEAT_false = false;
+###################################################################
+
+
+PARAM_DBG_RenderPrimitive_Source   	    = false;	PARAM_DBG_RenderPrimitive_Target   	    = false;
+
+PARAM_DBG_RenderSkeleton_Source    	    = false;	PARAM_DBG_RenderSkeleton_Target    	    = false;
+
+PARAM_DBG_RenderMesh_Source__Hands          = false;	PARAM_DBG_RenderMesh_Target__Hands          = false;
+PARAM_DBG_RenderMesh_Source__Object         = false;	PARAM_DBG_RenderMesh_Target__Object         = false;
+PARAM_DBG_RenderMesh_Source__Normals        = false;	PARAM_DBG_RenderMesh_Target__Normals        = false;
+PARAM_DBG_ColorrMesh_Source__prAnim0_Mdel1  = true;	PARAM_DBG_ColorrMesh_Target__prAnim0_Mdel1  = true;
+
+PARAM_DBG_OverloadPCL_Source_ALL 	    = false;	PARAM_DBG_OverloadPCL_Target_ALL 	    = false;
+PARAM_DBG_OverloadPCL_Source_HandsNonOccl   = false;	PARAM_DBG_OverloadPCL_Target_HandsNonOccl   = false;
+
+PARAM_DBG_Renderable_Model_Hand_R 	    = true;
+PARAM_DBG_Renderable_Model_Hand_L 	    = false;
+PARAM_DBG_Renderable_Model_Object 	    = true;
+
+################################################################################################################
+################################################################################################################
+################################################################################################################
+
+#####################################################
+PARAM_DBG_RenderMesh_Color_TouchCORR	     = true;
+#####################################################
+
+PARAM_DBG_Apply_Transf_Obj_Feat2d	     = false;
+PARAM_DBG_Apply_Transf_Obj_Feat3d	     = false;
+PARAM_DBG_Apply_Transf_Skin		     = false;
+PARAM_DBG_Apply_Transf_ICP         	     = false;
+
+PARAM_DBG_RenderCORR_Obj_FakeTransf          = false;
+
+PARAM_DBG_RenderCORR_Obj_Feat2d              = true;
+PARAM_DBG_RenderCORR_Obj_Feat3d              = true;
+PARAM_DBG_RenderCORR_Skin                    = false;
+PARAM_DBG_RenderCORR_SkinADD                 = 1;
+PARAM_DBG_RenderCORR_Skin_TouchVertSphereSiz = 0.75;
+
+################################################################################################################
+################################################################################################################
+################################################################################################################
+
+PARAM_DBG_offx_synthetic           = 20.0;
+PARAM_DBG_offy_synthetic           = 20.0;
+PARAM_DBG_offz_synthetic           = 150.0;
+
+PARAM_DBG_offx_realistic_CARMINE   = 20.0;
+PARAM_DBG_offy_realistic_CARMINE   = 20.0;
+PARAM_DBG_offz_realistic_CARMINE   = 120.0;
+
+################################################################################################################
+################################################################################################################
+################################################################################################################
+
+PARAM_DBG_addCoordinateSystem      = false;
+PARAM_DBG_addCoordinateSysSIZ      = 100.0;
+
+PARAM_DBG_Render_PASS_FILTER	   = true;
+
+################################################################################################################
+####  sourceID = cloudID + 1                      + PARAM_DBG_offfff;  #########################################
+####  targetID = cloudID + 0 - PARAM_DBG_offInter + PARAM_DBG_offfff;  #########################################
+################################################################################################################
+
+PARAM_DBG_offfff   = 40;	# SOURCE
+PARAM_DBG_offInter = 0; 	# TARGET
+	
+
+
