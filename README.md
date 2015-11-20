@@ -1,5 +1,4 @@
-3D Object Reconstruction from 
-=====
+3D Object Reconstruction from__
 Hand-Object Interactions
 =====
 
