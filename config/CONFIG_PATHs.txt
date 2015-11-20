@@ -1,2 +1,2 @@
-Directory_where_FRAMES_zips_are_unzipped               = "/media/381279A834F7273C/Luca_Files/Videos_Frames";
-Directory_where_MODELS_MOTION_CAMERA_zips_are_unzipped = "/media/381279A834F7273C/myOutput/myTracker";
+Directory_where_FRAMES_zips_are_unzipped               = "/media/381279A834F7273C/DATASET/Frames";
+Directory_where_MODELS_MOTION_CAMERA_zips_are_unzipped = "/media/381279A834F7273C/DATASET/Models_Motion_Camera";
