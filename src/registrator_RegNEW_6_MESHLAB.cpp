@@ -21,10 +21,11 @@ void Registrator::myReg_X_MESHLAB_local( QString OUTPUT_PATH )
         QString pathOUT = OUTPUT_PATH + "___OUT___3___FINAL_Watertight_MESH.ply";
         QString pathSCR = "registrator_RegNEW_6_MESLAB_SCRIPT.mlx";
 
-        QDir         qdir( qApp->applicationDirPath() );
-                     qdir.cdUp();
-                   //qdir.cdUp();
-        pathSCR =    qdir.path() + "/src/" + pathSCR;
+        QDir                                qdir( qApp->applicationDirPath() );
+                                            qdir.cdUp();
+        if (IS_ROOT_DIR(qdir) == false)     qdir.cdUp();
+
+        pathSCR =                           qdir.path() + "/src/" + pathSCR;
 
         std::cout <<                          std::endl;
         std::cout << pathINN.toStdString() << std::endl;

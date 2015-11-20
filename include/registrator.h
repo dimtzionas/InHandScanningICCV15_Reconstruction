@@ -19,6 +19,10 @@
 #include <QDir>
 #include <QVector>
 
+//////////////////////////////////////////////////////////
+//#define EIGEN_YES_I_KNOW_SPARSE_MODULE_IS_NOT_STABLE_YET
+//////////////////////////////////////////////////////////
+
 #include <pcl/common/transformation_from_correspondences.h>
 
 #include <pcl/registration/correspondence_estimation.h>
@@ -269,6 +273,9 @@ public:
     QString  PATH_CONFIG_PARAMs;
     QString  PATH_CONFIG_PATHs;
     QString  PATH_CONFIG_DBG;
+
+
+    bool IS_ROOT_DIR( QDir &qdir );
 
 
     QVector<PoseNotebookElement> poseNoteBook;

@@ -12,13 +12,13 @@
 
 
 
-
 Registrator::Registrator( QString fileName_CONFIG_RUN, QString fileName_CONFIG_PARAMs, bool FLAG_touchFrames_PRINT, bool FLAG_print_CONFIG )
 {
 
-        QDir                    qdir( qApp->applicationDirPath() );
-                                qdir.cdUp();
-                              //qdir.cdUp();
+        QDir                                qdir( qApp->applicationDirPath() );
+                                            qdir.cdUp();
+        if (IS_ROOT_DIR(qdir) == false)     qdir.cdUp();
+
         PATH_CONFIG_baseInput = qdir.path();
         PATH_CONFIG_RUN       = PATH_CONFIG_baseInput + "/config/" + fileName_CONFIG_RUN;
         PATH_CONFIG_PARAMs    = PATH_CONFIG_baseInput + "/config/" + fileName_CONFIG_PARAMs;
@@ -490,5 +490,34 @@ void Registrator::construct( bool applyHANDs_IN, bool hasHANDs_IN, QString INPUT
 }
 
 
+
+
+
+
+
+bool Registrator::IS_ROOT_DIR( QDir &qdir )
+{
+
+        QStringList allFiles = qdir.entryList(QDir::NoDotAndDotDot | QDir::System | QDir::AllDirs | QDir::Files, QDir::DirsFirst);//(QDir::Filter::Files,QDir::SortFlag::NoSort)   QDir::Hidden  |
+
+        //std::cout << "myStringListFILENAME.count() = " << allFiles.count() << "     " << qdir.path().toStdString() << std::endl;
+
+        bool FLAG_ROOT_Dir = false;
+        bool FLAG_config   = false;
+        bool FLAG_src      = false;
+
+        for (int iii=0; iii<allFiles.count(); iii++)
+        {
+            //std::cout << allFiles[iii].toStdString() << std::endl;
+
+            if      (allFiles[iii] == "src")       FLAG_src    = true;
+            else if (allFiles[iii] == "config")    FLAG_config = true;
+        }
+
+        FLAG_ROOT_Dir = FLAG_src && FLAG_config;
+
+        return FLAG_ROOT_Dir;
+
+}
 
 
