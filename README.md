@@ -1,15 +1,13 @@
-3D Object Reconstruction from<br/>Hand-Object Interactions
+3D Object Reconstruction from<br>Hand-Object Interactions
 =====
 
 General Info
 ----
 The source code files in this directory are an implementation of the pipeline presented in the paper:
 
-  **3D Object Reconstruction from Hand-Object Interactions**
-
-  **Tzionas D., Gall J.**
-
-  **International Conference on Computer Vision 2015 (ICCV'15)**
+**3D Object Reconstruction from Hand-Object Interactions**<br>
+Tzionas D., Gall J.<br>
+International Conference on Computer Vision 2015 (ICCV'15)<br>
 
 **http://files.is.tue.mpg.de/dtzionas/In-Hand-Scanning**
 
