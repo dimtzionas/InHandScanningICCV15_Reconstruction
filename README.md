@@ -11,6 +11,10 @@ The source code files in this directory are an implementation of the pipeline pr
 
 **http://files.is.tue.mpg.de/dtzionas/In-Hand-Scanning**
 
+
+Setup
+----
+
 The code was tested using Ubuntu 12.04, PCL 1.7, OpenCV 2.4.8.
 
 
