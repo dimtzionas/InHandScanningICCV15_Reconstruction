@@ -20,7 +20,7 @@
 #include <QVector>
 
 //////////////////////////////////////////////////////////
-//#define EIGEN_YES_I_KNOW_SPARSE_MODULE_IS_NOT_STABLE_YET
+//#define EIGEN_YES_I_KNOW_SPARSE_MODULE_IS_NOT_STABLE_YET        // Comment-OUT when compiling with CMakeLists // Comment_IN whn compiling with .pro
 //////////////////////////////////////////////////////////
 
 #include <pcl/common/transformation_from_correspondences.h>
