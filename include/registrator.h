@@ -262,8 +262,7 @@ public:
 
     void     read_CONFIG_PARAMs();
     void    print_CONFIG_PARAMs();
-    void     read_CONFIG_PATHs( int seqID );
-    void    print_CONFIG_PATHs();
+    void     read_CONFIG_PATHs();
     void     read_CONFIG_DBG();
     void    print_CONFIG_DBG();
     void     read_CONFIG_RUN();
@@ -273,6 +272,9 @@ public:
     QString  PATH_CONFIG_PARAMs;
     QString  PATH_CONFIG_PATHs;
     QString  PATH_CONFIG_DBG;
+
+    void update_PATHs( int seqID );
+    void update_PATHs_print();
 
 
     bool IS_ROOT_DIR( QDir &qdir );
@@ -297,6 +299,7 @@ public:
     QString PATH_INDEX_BOUNDS;
     QString PATH_CAMERA_SET;
 
+    QString VIDEO_FRAMES___BasePath;
     QString PATH_OUTPUT_BASE;
 
     double PARAM_NORMAL_MaxDepthChangeFactor;
@@ -518,6 +521,7 @@ public:
     ////////////////////////////////////////////////////
     bool    PARAM_RUN_applyHANDs;
     bool    PARAM_RUN_hasHANDs;
+    QString PARAM_RUN_SEQ_ID;
     QString PARAM_RUN_INPUT_PATH;
     QString PARAM_RUN_RunningMODE;
     bool    PARAM_RUN_VIEW_ENABLED;

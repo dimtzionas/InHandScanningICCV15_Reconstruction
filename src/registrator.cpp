@@ -25,6 +25,10 @@ Registrator::Registrator( QString fileName_CONFIG_RUN, QString fileName_CONFIG_P
         PATH_CONFIG_PATHs     = PATH_CONFIG_baseInput + "/config/" + "/CONFIG_PATHs.txt";
         PATH_CONFIG_DBG       = PATH_CONFIG_baseInput + "/config/" + "/CONFIG_DBG.txt";
 
+        ////////////////////
+        read_CONFIG_PATHs();
+        ////////////////////
+
         //////////////////      ///////////////////////////////////////////
         read_CONFIG_RUN();      if (FLAG_print_CONFIG)  print_CONFIG_RUN();
         //////////////////      ///////////////////////////////////////////
@@ -171,11 +175,11 @@ void Registrator::construct( bool applyHANDs_IN, bool hasHANDs_IN, QString INPUT
             if (hasHANDs)
             {
 
-                    /****************************/      /*******************************************/
-                    /****************************/      /*******************************************/
-                    read_CONFIG_PATHs(sequenceID);      if (FLAG_print_CONFIG)  print_CONFIG_PATHs();
-                    /****************************/      /*******************************************/
-                    /****************************/      /*******************************************/
+                    /***********************/      /*******************************************/
+                    /***********************/      /*******************************************/
+                    update_PATHs(sequenceID);      if (FLAG_print_CONFIG)  update_PATHs_print();
+                    /***********************/      /*******************************************/
+                    /***********************/      /*******************************************/
 
                     QString                                                               sequenceIDstring = QString::number(sequenceID).rightJustified(3,'0',false);
                     QString                                     INPUT_dynamicStringPart;

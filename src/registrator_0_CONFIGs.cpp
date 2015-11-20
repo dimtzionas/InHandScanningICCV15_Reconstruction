@@ -31,9 +31,9 @@ void Registrator::read_CONFIG_RUN()
 
 
         PARAM_RUN_applyHANDs           =                                  configFile_RUN.lookup( "PARAM_RUN_applyHANDs" );
-        PARAM_RUN_hasHANDs             =                                  configFile_RUN.lookup( "PARAM_RUN_hasHANDs" );
-        PARAM_RUN_INPUT_PATH           = QString::fromLatin1((const char*)configFile_RUN.lookup( "PARAM_RUN_INPUT_PATH" ));
-        PARAM_RUN_RunningMODE          = QString::fromLatin1((const char*)configFile_RUN.lookup( "PARAM_RUN_RunningMODE" ));
+        PARAM_RUN_hasHANDs             =                                  configFile_RUN.lookup( "PARAM_RUN_hasHANDs" );        /////////////////////////////////////////////////////////////////////////
+        PARAM_RUN_SEQ_ID               = QString::fromLatin1((const char*)configFile_RUN.lookup( "PARAM_RUN_SEQ_ID" ));         PARAM_RUN_INPUT_PATH = VIDEO_FRAMES___BasePath + PARAM_RUN_SEQ_ID + "/1";
+        PARAM_RUN_RunningMODE          = QString::fromLatin1((const char*)configFile_RUN.lookup( "PARAM_RUN_RunningMODE" ));    /////////////////////////////////////////////////////////////////////////
         PARAM_RUN_VIEW_ENABLED         =                                  configFile_RUN.lookup( "PARAM_RUN_VIEW_ENABLED" );
         PARAM_RUN_FEAT_ENABLED         =                                  configFile_RUN.lookup( "PARAM_RUN_FEAT_ENABLED" );
         PARAM_RUN_ICP_ENABLED          =                                  configFile_RUN.lookup( "PARAM_RUN_ICP_ENABLED" );
@@ -71,6 +71,7 @@ void Registrator::print_CONFIG_RUN()
         std::cout <<                                                                                                                   std::endl;
         std::cout << "PARAM_RUN_applyHANDs                          " << "\t\t" << PARAM_RUN_applyHANDs                             << std::endl;
         std::cout << "PARAM_RUN_hasHANDs                            " << "\t\t" << PARAM_RUN_hasHANDs                               << std::endl;
+        std::cout << "PARAM_RUN_SEQ_ID                              " << "\t\t" << PARAM_RUN_SEQ_ID.toStdString()                   << std::endl;
         std::cout << "PARAM_RUN_INPUT_PATH                          " << "\t\t" << PARAM_RUN_INPUT_PATH.toStdString()               << std::endl;
         std::cout << "PARAM_RUN_RunningMODE                         " << "\t\t" << PARAM_RUN_RunningMODE.toStdString()              << std::endl;
         std::cout << "PARAM_RUN_VIEW_ENABLED                        " << "\t\t" << PARAM_RUN_VIEW_ENABLED                           << std::endl;
@@ -799,7 +800,7 @@ void Registrator::print_CONFIG_PARAMs()
 
 
 
-void Registrator::read_CONFIG_PATHs( int seqID )
+void Registrator::read_CONFIG_PATHs()
 {
 
         ///////////////////////////////////
@@ -818,9 +819,8 @@ void Registrator::read_CONFIG_PATHs( int seqID )
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        QString VIDEO_FRAMES___BasePath   = QString::fromLatin1((const char*)configFile_PATHs.lookup( "Directory_where_FRAMES_zips_are_unzipped" ));
-
-            PATH_OUTPUT_BASE              = QString::fromLatin1((const char*)configFile_PATHs.lookup( "Directory_where_MODELS_MOTION_CAMERA_zips_are_unzipped" ));
+            VIDEO_FRAMES___BasePath   = QString::fromLatin1((const char*)configFile_PATHs.lookup( "Directory_where_FRAMES_zips_are_unzipped" ));
+            PATH_OUTPUT_BASE          = QString::fromLatin1((const char*)configFile_PATHs.lookup( "Directory_where_MODELS_MOTION_CAMERA_zips_are_unzipped" ));
         ////////////////////////////////////////////
         if (PATH_OUTPUT_BASE.endsWith("/") == false)
             PATH_OUTPUT_BASE +=       "/";
@@ -829,6 +829,10 @@ void Registrator::read_CONFIG_PATHs( int seqID )
             VIDEO_FRAMES___BasePath +=       "/";
         ///////////////////////////////////////////////////
 
+}
+
+void Registrator::update_PATHs( int seqID )
+{
 
         QString strrr_SEQ = QString::number( seqID ).rightJustified(3,'0',false);
 
@@ -840,7 +844,7 @@ void Registrator::read_CONFIG_PATHs( int seqID )
 
 }
 
-void Registrator::print_CONFIG_PATHs()
+void Registrator::update_PATHs_print()
 {
 
         std::cout <<                                                                                                   std::endl;
