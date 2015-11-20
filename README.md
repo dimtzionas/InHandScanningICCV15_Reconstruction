@@ -21,13 +21,14 @@ The code was tested using Ubuntu 12.04, PCL 1.7, OpenCV 2.4.8.
 Dependencies
 ----
 
-CMake, OpenCV, Eigen3, libconfig++8-dev, QT4, PCL (also installes Boost):
+CMake, OpenCV, Eigen3, libconfig++8-dev, Meshlab, QT4, PCL (also installes Boost):
 
     sudo apt-get update
     sudo apt-get install build-essential
     sudo apt-get install libopencv-dev
     sudo apt-get install libeigen3-dev
     sudo apt-get install libconfig++8-dev
+    sudo apt-get install meshlab
     sudo apt-get install qt4-dev-tools libqt4-dev libqt4-core libqt4-gui
 
     sudo add-apt-repository ppa:v-launchpad-jochen-sprickerhof-de/pcl
