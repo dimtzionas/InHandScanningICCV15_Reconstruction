@@ -1,15 +1,19 @@
+3D Object Reconstruction from
+Hand-Object Interactions
+=====
+
+General Info
+----
 The source code files in this directory are an implementation of the pipeline presented in the paper:
-==============================================================
+
   3D Object Reconstruction from Hand-Object Interactions
   Tzionas D., Gall J.
   International Conference on Computer Vision 2015 (ICCV'15)
-==============================================================
-Web:  http://files.is.tue.mpg.de/dtzionas/In-Hand-Scanning
-==============================================================
+
+http://files.is.tue.mpg.de/dtzionas/In-Hand-Scanning
 
 The code was tested using Ubuntu 12.04, PCL 1.7, OpenCV 2.4.8.
 
-==============================================================
 
 Dependencies
 ----
