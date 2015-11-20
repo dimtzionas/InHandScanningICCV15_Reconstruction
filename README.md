@@ -58,15 +58,15 @@ Configure
 
 Please download from the project's website			<br>
 http://files.is.tue.mpg.de/dtzionas/In-Hand-Scanning/		<br>
-- the *Frames*               <br>(e.g. http://files.is.tue.mpg.de/dtzionas/In-Hand-Scanning/Dataset/Frames___All_Files___No_Detections/001.zip)
-- the *Models/Motion/Camera* <br>(e.g. http://files.is.tue.mpg.de/dtzionas/In-Hand-Scanning/Dataset/Models/SeqViewing/001.zip)
+- the **Frames**               <br>(e.g. http://files.is.tue.mpg.de/dtzionas/In-Hand-Scanning/Dataset/Frames___All_Files___No_Detections/001.zip)
+- the **Models/Motion/Camera** <br>(e.g. http://files.is.tue.mpg.de/dtzionas/In-Hand-Scanning/Dataset/Models/SeqViewing/001.zip)
 file for each sequence (001 or 002 or 003 or 004).
 
 Please:
 - unzip them in a different location (to avoid name conflicts)
 - do NOT change the name of the exported folder (should be 001 or 002 or 003 or 004)
 - enter the names of directories where the zips were unzipped in the file 
-./config/CONFIG_PATHs.txt
+**./config/CONFIG_PATHs.txt**
 
 
 Run

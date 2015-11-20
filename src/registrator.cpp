@@ -105,6 +105,13 @@ void Registrator::construct( bool applyHANDs_IN, bool hasHANDs_IN, QString INPUT
             QString          pathhh_RGB = INPUT_PATH + "rgb/";
             QDir recoredDir( pathhh_RGB);
 
+            if (recoredDir.exists() == false)
+            {
+                std::cout << "\n\n" << pathhh_RGB.toStdString() << "\n\n" << std::endl;
+
+                std::cout << "\n\n" << "Probably you forgot to edit the **./configCONFIG_PATHs.txt** file !!!" << "\n\n" << std::endl;
+            }
+
             QStringList allFiles = recoredDir.entryList(QDir::NoDotAndDotDot | QDir::System | QDir::Hidden  | QDir::AllDirs | QDir::Files, QDir::DirsFirst);//(QDir::Filter::Files,QDir::SortFlag::NoSort)
 
             QStringList myStringListFILENAME = QString(allFiles[0]).split( '.', QString::SkipEmptyParts );
