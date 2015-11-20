@@ -1,17 +1,18 @@
 The source code files in this directory are an implementation of the pipeline presented in the paper:
-**************************************************************
+==============================================================
   3D Object Reconstruction from Hand-Object Interactions
   Tzionas D., Gall J.
   International Conference on Computer Vision 2015 (ICCV'15)
-**************************************************************
+==============================================================
 Web:  http://files.is.tue.mpg.de/dtzionas/In-Hand-Scanning
-**************************************************************
-
+==============================================================
 
 The code was tested using Ubuntu 12.04, PCL 1.7, OpenCV 2.4.8.
 
+==============================================================
 
-Dependencies:
+Dependencies
+----
 
 CMake, OpenCV, Eigen3, libconfig++8-dev, QT4, PCL (also installes Boost):
 
@@ -33,16 +34,21 @@ Compilation should be performed at this point as described in the README.md, fol
 sudo make install
 Original source: https://github.com/sdmiller/cpu_tsdf
 
+==============================================================
 
-To Build:
+Build
+----
 
 mkdir build
 cd build
 cmake ..
 make
 
+==============================================================
 
-Configure:
+Configure
+----
+
 Please download from the project's website
 http://files.is.tue.mpg.de/dtzionas/In-Hand-Scanning/
 - the *Frames*               (e.g. http://files.is.tue.mpg.de/dtzionas/In-Hand-Scanning/Dataset/Frames___All_Files___No_Detections/001.zip) and
@@ -54,8 +60,10 @@ Please:
 - enter the names of directories where the zips were unzipped in the file 
 ./config/CONFIG_PATHs.txt
 
+==============================================================
 
-Run: 
+Run
+----
 
 The paper includes the reconstruction of 4 objects (Water Bottle, Bowling Pin, Small Bottle, Sphere).
 To run the reconstruction for an object run one of the following scripts from the current directory:
