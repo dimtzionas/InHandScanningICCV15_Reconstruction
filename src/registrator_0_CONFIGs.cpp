@@ -24,21 +24,21 @@ void Registrator::read_CONFIG_RUN()
 
         try
         {
-            configFile_RUN.readFile( PATH_CONFIG_RUN.toAscii() );
+            configFile_RUN.readFile( PATH_CONFIG_RUN.toLatin1() );
         }
         catch(const libconfig::FileIOException &fioex)   {   std::cout << "Could not read config file "                                                    << std::endl;   return;   }
         catch(      libconfig::ParseException  &pex  )   {   std::cout << "Parse error at config file, Line: " << pex.getLine() << " - " << pex.getError() << std::endl;   return;   }
 
 
-        PARAM_RUN_applyHANDs           =                                 configFile_RUN.lookup( "PARAM_RUN_applyHANDs" );
-        PARAM_RUN_hasHANDs             =                                 configFile_RUN.lookup( "PARAM_RUN_hasHANDs" );
-        PARAM_RUN_INPUT_PATH           = QString::fromAscii((const char*)configFile_RUN.lookup( "PARAM_RUN_INPUT_PATH" ));
-        PARAM_RUN_RunningMODE          = QString::fromAscii((const char*)configFile_RUN.lookup( "PARAM_RUN_RunningMODE" ));
-        PARAM_RUN_VIEW_ENABLED         =                                 configFile_RUN.lookup( "PARAM_RUN_VIEW_ENABLED" );
-        PARAM_RUN_FEAT_ENABLED         =                                 configFile_RUN.lookup( "PARAM_RUN_FEAT_ENABLED" );
-        PARAM_RUN_ICP_ENABLED          =                                 configFile_RUN.lookup( "PARAM_RUN_ICP_ENABLED" );
-        PARAM_RUN_syntheticORrealistic = QString::fromAscii((const char*)configFile_RUN.lookup( "PARAM_RUN_syntheticORrealistic" ));
-        PARAM_RUN_commentStr           = QString::fromAscii((const char*)configFile_RUN.lookup( "PARAM_RUN_commentStr" ));
+        PARAM_RUN_applyHANDs           =                                  configFile_RUN.lookup( "PARAM_RUN_applyHANDs" );
+        PARAM_RUN_hasHANDs             =                                  configFile_RUN.lookup( "PARAM_RUN_hasHANDs" );
+        PARAM_RUN_INPUT_PATH           = QString::fromLatin1((const char*)configFile_RUN.lookup( "PARAM_RUN_INPUT_PATH" ));
+        PARAM_RUN_RunningMODE          = QString::fromLatin1((const char*)configFile_RUN.lookup( "PARAM_RUN_RunningMODE" ));
+        PARAM_RUN_VIEW_ENABLED         =                                  configFile_RUN.lookup( "PARAM_RUN_VIEW_ENABLED" );
+        PARAM_RUN_FEAT_ENABLED         =                                  configFile_RUN.lookup( "PARAM_RUN_FEAT_ENABLED" );
+        PARAM_RUN_ICP_ENABLED          =                                  configFile_RUN.lookup( "PARAM_RUN_ICP_ENABLED" );
+        PARAM_RUN_syntheticORrealistic = QString::fromLatin1((const char*)configFile_RUN.lookup( "PARAM_RUN_syntheticORrealistic" ));
+        PARAM_RUN_commentStr           = QString::fromLatin1((const char*)configFile_RUN.lookup( "PARAM_RUN_commentStr" ));
 
         PARAM_INDEX_List.indexPairs.resize(1);
         PARAM_INDEX_List.indexPairs[0].STARTTT_fileID = 0;
@@ -109,7 +109,7 @@ void Registrator::read_CONFIG_DBG()
 
         try
         {
-            configFile_DBG.readFile( PATH_CONFIG_DBG.toAscii() );
+            configFile_DBG.readFile( PATH_CONFIG_DBG.toLatin1() );
         }
         catch(const libconfig::FileIOException &fioex)   {   std::cout << "Could not read config file "                                                    << std::endl;   return;   }
         catch(      libconfig::ParseException  &pex  )   {   std::cout << "Parse error at config file, Line: " << pex.getLine() << " - " << pex.getError() << std::endl;   return;   }
@@ -398,7 +398,7 @@ void Registrator::read_CONFIG_PARAMs()
 
         try
         {
-            configFile_PARAMs.readFile( PATH_CONFIG_PARAMs.toAscii() );
+            configFile_PARAMs.readFile( PATH_CONFIG_PARAMs.toLatin1() );
         }
         catch(const libconfig::FileIOException &fioex)   {   std::cout << "Could not read config file "                                                    << std::endl;   return;   }
         catch(      libconfig::ParseException  &pex  )   {   std::cout << "Parse error at config file, Line: " << pex.getLine() << " - " << pex.getError() << std::endl;   return;   }
@@ -625,12 +625,12 @@ void Registrator::read_CONFIG_PARAMs()
 
         try
         {
-            configFile_RUN.readFile( PATH_CONFIG_RUN.toAscii() );
+            configFile_RUN.readFile( PATH_CONFIG_RUN.toLatin1() );
         }
         catch(const libconfig::FileIOException &fioex)   {   std::cout << "Could not read config file "                                                    << std::endl;   return;   }
         catch(      libconfig::ParseException  &pex  )   {   std::cout << "Parse error at config file, Line: " << pex.getLine() << " - " << pex.getError() << std::endl;   return;   }
 
-            PARAM_ICP_Mode__previous_OR_metascan  = QString::fromAscii((const char*)configFile_RUN.lookup( "PARAM_ICP_Mode__previous_OR_metascan" ));
+            PARAM_ICP_Mode__previous_OR_metascan  = QString::fromLatin1((const char*)configFile_RUN.lookup( "PARAM_ICP_Mode__previous_OR_metascan" ));
         if (PARAM_ICP_Mode__previous_OR_metascan != "previous" &&
             PARAM_ICP_Mode__previous_OR_metascan != "metascan" )
         {
@@ -638,8 +638,8 @@ void Registrator::read_CONFIG_PARAMs()
             exit(1);
         }
 
-            PARAM_ICP_Mode__p2p_OR_p2plane             = QString::fromAscii((const char*)configFile_RUN.lookup( "PARAM_ICP_Mode__p2p_OR_p2plane"            ));
-            PARAM_ICP_Mode__p2p_OR_p2plane_TRANSITION  = QString::fromAscii((const char*)configFile_RUN.lookup( "PARAM_ICP_Mode__p2p_OR_p2plane_TRANSITION" ));
+            PARAM_ICP_Mode__p2p_OR_p2plane             = QString::fromLatin1((const char*)configFile_RUN.lookup( "PARAM_ICP_Mode__p2p_OR_p2plane"            ));
+            PARAM_ICP_Mode__p2p_OR_p2plane_TRANSITION  = QString::fromLatin1((const char*)configFile_RUN.lookup( "PARAM_ICP_Mode__p2p_OR_p2plane_TRANSITION" ));
         if (PARAM_ICP_Mode__p2p_OR_p2plane            != "p2p"     &&
             PARAM_ICP_Mode__p2p_OR_p2plane            != "p2plane" &&
             PARAM_ICP_Mode__p2p_OR_p2plane            != "p2planeW"&&
@@ -651,7 +651,7 @@ void Registrator::read_CONFIG_PARAMs()
             exit(1);
         }
 
-            PARAM_OBJ_Mode__p2p_OR_p2plane  = QString::fromAscii((const char*)configFile_RUN.lookup( "PARAM_OBJ_Mode__p2p_OR_p2plane" ));
+            PARAM_OBJ_Mode__p2p_OR_p2plane  = QString::fromLatin1((const char*)configFile_RUN.lookup( "PARAM_OBJ_Mode__p2p_OR_p2plane" ));
         if (PARAM_OBJ_Mode__p2p_OR_p2plane != "p2p"     &&
             PARAM_OBJ_Mode__p2p_OR_p2plane != "p2plane" &&
             PARAM_OBJ_Mode__p2p_OR_p2plane != "p2planeW" )
@@ -662,9 +662,9 @@ void Registrator::read_CONFIG_PARAMs()
 
         if (applyHANDs)
         {
-        touch->PARAM_SKIN_ENFORCE_MIN_TouchFING_2_EXIT          =                                 configFile_RUN.lookup( "PARAM_SKIN_ENFORCE_MIN_TouchFING_2_EXIT"          );
-        touch->PARAM_SKIN_ENFORCE_MIN_TouchPtsPerFinger         =                                 configFile_RUN.lookup( "PARAM_SKIN_ENFORCE_MIN_TouchPtsPerFinger"         );
-        touch->PARAM_TOUCH_Mode__intersection_OR_union_OR_full  = QString::fromAscii((const char*)configFile_RUN.lookup( "PARAM_TOUCH_Mode__intersection_OR_union_OR_full"  ));
+        touch->PARAM_SKIN_ENFORCE_MIN_TouchFING_2_EXIT          =                                  configFile_RUN.lookup( "PARAM_SKIN_ENFORCE_MIN_TouchFING_2_EXIT"          );
+        touch->PARAM_SKIN_ENFORCE_MIN_TouchPtsPerFinger         =                                  configFile_RUN.lookup( "PARAM_SKIN_ENFORCE_MIN_TouchPtsPerFinger"         );
+        touch->PARAM_TOUCH_Mode__intersection_OR_union_OR_full  = QString::fromLatin1((const char*)configFile_RUN.lookup( "PARAM_TOUCH_Mode__intersection_OR_union_OR_full"  ));
         if (touch->PARAM_TOUCH_Mode__intersection_OR_union_OR_full != "union"        &&
             touch->PARAM_TOUCH_Mode__intersection_OR_union_OR_full != "intersection" &&
             touch->PARAM_TOUCH_Mode__intersection_OR_union_OR_full != "full"          )
@@ -810,7 +810,7 @@ void Registrator::read_CONFIG_PATHs( int seqID )
 
         try
         {
-            configFile_PATHs.readFile( PATH_CONFIG_PATHs.toAscii() );
+            configFile_PATHs.readFile( PATH_CONFIG_PATHs.toLatin1() );
         }
         catch(const libconfig::FileIOException &fioex)   {   std::cout << "Could not read config file "                                                    << std::endl;   return;   }
         catch(      libconfig::ParseException  &pex  )   {   std::cout << "Parse error at config file, Line: " << pex.getLine() << " - " << pex.getError() << std::endl;   return;   }
@@ -818,9 +818,9 @@ void Registrator::read_CONFIG_PATHs( int seqID )
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        QString VIDEO_FRAMES___BasePath   = QString::fromAscii((const char*)configFile_PATHs.lookup( "Directory_where_FRAMES_zips_are_unzipped" ));
+        QString VIDEO_FRAMES___BasePath   = QString::fromLatin1((const char*)configFile_PATHs.lookup( "Directory_where_FRAMES_zips_are_unzipped" ));
 
-            PATH_OUTPUT_BASE              = QString::fromAscii((const char*)configFile_PATHs.lookup( "Directory_where_MODELS_MOTION_CAMERA_zips_are_unzipped" ));
+            PATH_OUTPUT_BASE              = QString::fromLatin1((const char*)configFile_PATHs.lookup( "Directory_where_MODELS_MOTION_CAMERA_zips_are_unzipped" ));
         ////////////////////////////////////////////
         if (PATH_OUTPUT_BASE.endsWith("/") == false)
             PATH_OUTPUT_BASE +=       "/";
