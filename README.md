@@ -42,7 +42,6 @@ Compilation should be performed at this point as described in the README.md, fol
     sudo make install
 Original source: https://github.com/sdmiller/cpu_tsdf
 
-==============================================================
 
 Build
 ----
@@ -52,7 +51,6 @@ Build
     cmake ..
     make
 
-==============================================================
 
 Configure
 ----
@@ -69,7 +67,6 @@ Please:
 - enter the names of directories where the zips were unzipped in the file 
 ./config/CONFIG_PATHs.txt
 
-==============================================================
 
 Run
 ----
