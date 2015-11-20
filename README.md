@@ -6,8 +6,8 @@ General Info
 The source code files in this directory are an implementation of the pipeline presented in the paper:
 
 **3D Object Reconstruction from Hand-Object Interactions**<br>
-Tzionas D., Gall J.<br>
-International Conference on Computer Vision 2015 (ICCV'15)<br>
+**Tzionas D., Gall J.**<br>
+**International Conference on Computer Vision 2015 (ICCV'15)**<br>
 
 **http://files.is.tue.mpg.de/dtzionas/In-Hand-Scanning**
 
@@ -19,12 +19,12 @@ Dependencies
 
 CMake, OpenCV, Eigen3, libconfig++8-dev, QT4, PCL (also installes Boost):
 
-sudo apt-get update
-sudo apt-get install build-essential
-sudo apt-get install libopencv-dev
-sudo apt-get install libeigen3-dev
-sudo apt-get install libconfig++8-dev
-sudo apt-get install qt4-dev-tools libqt4-dev libqt4-core libqt4-gui
+    sudo apt-get update
+    sudo apt-get install build-essential
+    sudo apt-get install libopencv-dev
+    sudo apt-get install libeigen3-dev
+    sudo apt-get install libconfig++8-dev
+    sudo apt-get install qt4-dev-tools libqt4-dev libqt4-core libqt4-gui
 
 sudo add-apt-repository ppa:v-launchpad-jochen-sprickerhof-de/pcl
 sudo apt-get update
